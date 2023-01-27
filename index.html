@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="page">
+
+            <!-- Tarjeta de seleccion -->
+            <div class="card">
+                <img src="assets/img/hamburguesa1.jpg" class="card-img-top" alt="...">
+                <h3 class="card-title">Hamburgueseria FJ</h3>
+                
+                <div class="options">
+                    <h4>Cantidad:
+                        <input type="number" name="number" class="quantity" placeholder="Cantidad">
+                    </h4>
+                    
+                    <h4>Color:
+                        <select name="color" id="color" onchange='calcularTotal()' >
+                            <option value="red">Rojo</option>
+                            <option value="Yellow">Amarillo</option>
+                            <option value="Orange">Naranjo</option>
+                        </select>
+                    </h4>
+
+                </div>
+                
+                <div class="price-container">
+                   <p>Precio: $<span class="price">7.990</span></p> 
+                </div>
+                <button class="calculate" onclick="calcularTotal()">Calcular Total</button>  
+            </div>
+            
+                <!-- Tarjeta de resultados -->
+            <div class="card-totales">
+                <h3>Tu combo:</h3>
+                <div class="final-price">
+                    <h2 class="total-final">Total: <span class="final-price-amount">$0</span></h2>
+                </div>
+    
+                <div class="final-quantity">
+                   <h3 class="cantidad-final">Cantidad: <span class="final-quantity-amount">0</span></h3> 
+                </div>
+    
+                <div class="final-color">
+                    <p>Color:</p>
+                    <div class="bola-color"></div>
+                </div>
+    
+            </div>
+        
+        
+
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
